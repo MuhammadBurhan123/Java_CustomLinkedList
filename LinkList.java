@@ -30,6 +30,26 @@ public class LinkList {
             head.next = temp;
         }
     }
+    public void deleteFirst(){
+        if (head == null) {
+            System.out.println("List is empty");
+        } else {
+            head = head.next;
+        }
+    }
+
+    public void deleteLast(){
+        if (head == null) {
+            System.out.println("List is empty");
+        } else {
+            Node current = head;
+            while (current.next.next != null) { 
+                current = current.next;
+            }
+            current.next = null;
+        }
+    }
+
 
     public void display() {
         Node current = head;
