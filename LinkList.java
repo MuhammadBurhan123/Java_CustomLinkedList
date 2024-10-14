@@ -5,7 +5,7 @@ public class LinkList {
         this.head = null;
     }
 
-    public void add(int data) {
+    public void addLast(int data) {
         Node newNode = new Node(data);
 
         if (head == null) {
@@ -16,6 +16,18 @@ public class LinkList {
                 current = current.next;
             }
             current.next = newNode;
+        }
+    }
+
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+        }else{
+            Node temp = head;
+            head = newNode;
+            head.next = temp;
         }
     }
 
