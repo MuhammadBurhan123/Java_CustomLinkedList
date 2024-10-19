@@ -28,6 +28,10 @@ class Main{
          System.out.println("Delete middle");
          list.deleteMiddle();
          list.display();
-        
+
+        System.out.println("Add middle");
+         list.addMiddle(7);
+         list.display();
+         
     }
 }

@@ -31,6 +31,25 @@ public class LinkList {
         }
     }
 
+    public void addMiddle(int nodeData) {
+        if (head == null || head.next == null) {
+            System.out.println("List has less than 2 nodes");
+            return;
+        }
+    
+        Node slow = head;
+        Node fast = head;
+        
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        Node newNode = new Node(nodeData);
+        newNode.next = slow.next;
+        slow.next = newNode;
+    }   
+
     public void deleteFirst(){
         if (head == null) {
             System.out.println("List is empty");
