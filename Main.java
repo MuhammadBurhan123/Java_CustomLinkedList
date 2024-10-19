@@ -24,6 +24,10 @@ class Main{
          System.out.println("Delete first item");
          list.deleteLast();
          list.display();
+
+         System.out.println("Delete middle");
+         list.deleteMiddle();
+         list.display();
         
     }
 }

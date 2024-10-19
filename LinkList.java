@@ -30,6 +30,7 @@ public class LinkList {
             head.next = temp;
         }
     }
+
     public void deleteFirst(){
         if (head == null) {
             System.out.println("List is empty");
@@ -50,6 +51,24 @@ public class LinkList {
         }
     }
 
+    public void deleteMiddle() {
+        if (head == null || head.next == null) {
+            System.out.println("List has less than 2 nodes");
+            return;
+        }
+    
+        Node slow = head;
+        Node fast = head;
+        Node previous = null;
+    
+        while (fast != null && fast.next != null) {
+            previous = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        previous.next = slow.next;
+    }   
 
     public void display() {
         Node current = head;
